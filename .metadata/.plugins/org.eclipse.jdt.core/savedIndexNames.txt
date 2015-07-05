@@ -1,0 +1,3 @@
+INDEX VERSION 1.127+/Users/Paul/Desktop/JavaLab/.metadata/.plugins/org.eclipse.jdt.core
+3534364686.index
+895154599.index

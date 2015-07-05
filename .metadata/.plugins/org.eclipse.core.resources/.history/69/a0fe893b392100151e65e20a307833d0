@@ -1,0 +1,15 @@
+package first;
+
+public class ManTest {
+
+	public static void main(String[] args) {
+
+		Man leeMan = new Man();
+		leeMan.height = 180;
+		leeMan.setName("이승기");
+		
+		System.out.println(leeMan.getName());
+		
+	}
+
+}

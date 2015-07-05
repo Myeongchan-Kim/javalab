@@ -1,0 +1,14 @@
+package first;
+
+public class BuyTest {
+
+	public static void main(String[] args) {
+		FruitBuyer	buyer = new FruitBuyer(10000);
+		
+		FruitSeller	smallSeller = new FruitSeller(100, 20, 0);
+		FruitSeller	largeSeller = new FruitSeller(500, 20, 0);
+		
+		buyer.buyFruit(smallSeller, 1000);
+	}
+
+}

@@ -1,0 +1,26 @@
+package first;
+
+public class FruitSeller {
+
+	private int money;
+	private int numberOfFruits;
+	private int value;
+	
+	public FruitSeller(int value, int numberOfFruits){
+		this.value = value;
+		this.numberOfFruits = numberOfFruits;
+	}
+	
+	public int getMoney() {
+		return money;
+	}
+
+	public int getNumberOfFruits() {
+		return numberOfFruits;
+	}
+
+	public void setNumberOfFruits(int numberOfFruits) {
+		this.numberOfFruits = numberOfFruits;
+	}
+	
+}

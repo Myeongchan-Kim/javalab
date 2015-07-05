@@ -1,0 +1,46 @@
+package first;
+
+public class Man {
+	
+	/*instance variables*/
+	public String name;
+	private int NumberOfChildren;
+	private boolean isMarried;
+	private int age;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getNumberOfChildren() {
+		return NumberOfChildren;
+	}
+
+	public void setNumberOfChildren(int numberOfChildren) {
+		NumberOfChildren = numberOfChildren;
+	}
+
+	public boolean isMarried() {
+		return isMarried;
+	}
+
+	public void setMarried(boolean isMarried) {
+		this.isMarried = isMarried;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Man (String name){
+		this.name = name;
+	}
+}

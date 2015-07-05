@@ -1,0 +1,18 @@
+package first;
+
+public class Man {
+	
+	/*instance variable*/
+	String name;
+	int height;
+	float weight;
+	String character;
+	
+	public void setName(String name){
+		this.name = name; //'this' means itself's
+	}
+	
+	public String getName(){
+		return name;
+	}
+}

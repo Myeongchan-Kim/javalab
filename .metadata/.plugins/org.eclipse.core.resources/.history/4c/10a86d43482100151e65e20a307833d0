@@ -1,0 +1,18 @@
+package first;
+
+public class BuyTest {
+
+	public static void main(String[] args) {
+		FruitBuyer	buyer = new FruitBuyer(10000);
+		
+		FruitSeller	smallSeller = new FruitSeller(100, 20, 0);
+		FruitSeller	largeSeller = new FruitSeller(500, 20, 0);
+
+		System.out.println("My money : "+buyer.getMoney());
+		buyer.buyFruit(smallSeller, 1000);
+		buyer.buyFruit(largeSeller, 2000);
+		
+		
+	}
+
+}

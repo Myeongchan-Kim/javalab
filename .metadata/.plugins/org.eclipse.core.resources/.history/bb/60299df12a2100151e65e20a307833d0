@@ -1,0 +1,11 @@
+package first;
+
+public class Man {
+	
+	String name;
+	int height;
+	float weight;
+	String character;
+	
+	
+}

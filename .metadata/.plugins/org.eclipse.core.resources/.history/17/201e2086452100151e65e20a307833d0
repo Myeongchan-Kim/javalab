@@ -1,0 +1,25 @@
+package first;
+
+public class FruitBuyer {
+
+	private int money;
+	private int numberOfFruits;
+
+	public FruitBuyer(money){
+		this.money = money;
+	}
+	
+	public int getMoney() {
+		return money;
+	}
+
+	public int getNumberOfFruits() {
+		return numberOfFruits;
+	}
+
+	public void setNumberOfFruits(int numberOfFruits) {
+		this.numberOfFruits = numberOfFruits;
+	}
+
+	
+}
