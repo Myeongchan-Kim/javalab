@@ -14,9 +14,9 @@ public class BirthDayTest {
 	
 	public static void printIsValidDate(BirthDay date){
 		if(date.isVaildDate())
-			System.out.println(date.getYear() + "-" + date.getMonth() + "-" + date.getDay() + " is vaild.");
+			System.out.println(date.getYear() + "-" + date.getMonth() + "-" + date.getDay() + "is vaild.");
 		else 
-			System.out.println(date.getYear() + "-" + date.getMonth() + "-" + date.getDay() + " is NOT vaild.");		
+			System.out.println(date.getYear() + "-" + date.getMonth() + "-" + date.getDay() + "is NOT vaild.");		
 	}
 
 }

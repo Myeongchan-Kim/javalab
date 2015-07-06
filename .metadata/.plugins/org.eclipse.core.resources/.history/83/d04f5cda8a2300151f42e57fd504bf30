@@ -47,7 +47,7 @@ public class BirthDay {
 			}
 			else /*isLeapYear(this.year) == false*/
 			{
-				if(this.day <= 28 ) return true;
+				if(this.day <=28 ) return true;
 				else return false;
 			}
 			
