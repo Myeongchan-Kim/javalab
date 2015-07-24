@@ -8,6 +8,8 @@ public class MainTest {
 		
 		int result = TotalPriceCalculator.getResult(carCom);
 		System.out.println("Total price : "+ result);
+		
+		
 	}
 
 }
