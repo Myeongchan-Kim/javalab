@@ -1,0 +1,14 @@
+package ex7_18;
+
+public class Ex7_18 {
+
+	void action (Robot r){
+		if()
+	}
+	
+	public static void main(String[] args) {
+
+	
+	}
+
+}

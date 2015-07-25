@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="template.Student"/>
+<fullyQualifiedTypeName name="junit.framework.TestCase"/>
+<fullyQualifiedTypeName name="arrayList.Company"/>
+<fullyQualifiedTypeName name="shipping.GenerateReport"/>
+<fullyQualifiedTypeName name="shipping.Truck"/>
+<fullyQualifiedTypeName name="shipping.Company"/>
+<fullyQualifiedTypeName name="shipping.RiverBarge"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar"/>
+<fullyQualifiedTypeName name="ex6_20.Shuffle"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+</qualifiedTypeNameHistroy>
