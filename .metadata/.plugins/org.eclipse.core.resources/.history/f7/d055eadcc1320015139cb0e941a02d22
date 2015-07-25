@@ -1,0 +1,19 @@
+package ex7_14;
+
+public class SutdaCard {
+	final int NUM;
+	final boolean IS_KWANG;
+	
+	public SutdaCard(int num, boolean isKwang){
+		this.num = num;
+		this.isKwang = isKwang;
+	}
+	
+	public SutdaCard(){
+		this(1,true);
+	}
+	
+	public String toString(){
+		return num + (isKwang ? "K" : "");
+	}
+}
