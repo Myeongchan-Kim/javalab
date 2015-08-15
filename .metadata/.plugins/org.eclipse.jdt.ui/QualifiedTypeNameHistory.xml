@@ -28,7 +28,6 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="maze.constant.Geo"/>
 <fullyQualifiedTypeName name="maze.playerSet.DirectionSet"/>
-<fullyQualifiedTypeName name="maze.Map"/>
 <fullyQualifiedTypeName name="maze.playerSet.PosWithNext"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="maze.playerSet.Player"/>
@@ -37,4 +36,5 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="maze.playerSet.FourDirection"/>
 <fullyQualifiedTypeName name="maze.playerSet.KnightMove"/>
+<fullyQualifiedTypeName name="maze.Map"/>
 </qualifiedTypeNameHistroy>
