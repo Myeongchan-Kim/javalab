@@ -27,7 +27,7 @@ public class Player {
 			//System.out.println("move");
 		}
 		SayGoal();
-		System.out.println("Histroy : (from Goal by reverse)");
+		System.out.println("Histroy : (from last)");
 		PosWithNext pos;
 		while((pos = s.stack.pop()) != null){
 			System.out.println(pos);

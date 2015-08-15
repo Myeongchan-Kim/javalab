@@ -49,13 +49,12 @@ public class Strategy {
 				break;
 			}else{
 				curPos.nextDir = DirSet.nextDirection(curPos.nextDir);
-				nextPos = new PosWithNext( curPos.add(curPos.nextDir));
+				nextPos = new PosWithNext( curPos.add(curPos.nextDir), (Position)null);
 			}
 			
 			x = nextPos.x;
 			y = nextPos.y;
-		}while(	(y >= map.getMapHeight()-1)	|| 	(y <= 0) ||
-				(x >= map.getMapWidth()-1) 	||	(x <= 0) ||
+		}while(	y>=map.getMapHeight() || x>=map.getMapWidth() ||
 				map.getMap()[y][x] == Geo.WALL || visited[y][x] == true);
 		
 		if(nextPos == null) 

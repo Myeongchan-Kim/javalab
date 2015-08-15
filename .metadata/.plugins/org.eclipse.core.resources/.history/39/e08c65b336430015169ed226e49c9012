@@ -34,8 +34,7 @@ public class MazeTest {
 			dirSet = new FourDirection();
 		else if(dirType.equals("8"))
 			dirSet = new EightDirection();
-		else if(dirType.equals("Knight"))
-			dirSet = new KnightMove();
+		else if(dirType.equals("Knight"));
 		else 
 			dirSet = null;
 		

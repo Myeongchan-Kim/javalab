@@ -27,7 +27,7 @@ public class Player {
 			//System.out.println("move");
 		}
 		SayGoal();
-		System.out.println("Histroy : (from Goal by reverse)");
+		System.out.println("Histroy : (from last)");
 		PosWithNext pos;
 		while((pos = s.stack.pop()) != null){
 			System.out.println(pos);
@@ -41,13 +41,13 @@ public class Player {
 		if( !s.stack.isEmpty() && nextPos.equals(s.stack.top()) ){
 			nextPos = s.stack.pop();
 			s.visited[curPos.y][curPos.x] = true;
-			System.out.println(curPos.toString() +"->"+nextPos.toString()+"(move back)");
+			System.out.println("move back");
 			move(nextPos);
 		}
 		else {
 			s.stack.push(new PosWithNext(curPos));
 			s.visited[curPos.y][curPos.x] = true;
-			System.out.println(curPos.toString() +"->"+nextPos.toString());
+			System.out.println(curPos.toString() +"; next:"+curPos.nextDir.toString());
 			move(nextPos);
 		}
 		return true;

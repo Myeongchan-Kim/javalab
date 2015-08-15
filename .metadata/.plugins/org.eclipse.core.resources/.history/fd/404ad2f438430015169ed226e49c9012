@@ -49,7 +49,7 @@ public class Strategy {
 				break;
 			}else{
 				curPos.nextDir = DirSet.nextDirection(curPos.nextDir);
-				nextPos = new PosWithNext( curPos.add(curPos.nextDir));
+				nextPos = new PosWithNext( curPos.add(curPos.nextDir), (Position)null);
 			}
 			
 			x = nextPos.x;
