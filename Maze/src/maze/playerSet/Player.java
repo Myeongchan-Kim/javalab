@@ -20,7 +20,10 @@ public class Player {
 	
 	public void findRoot(){
 		while(!s.isGoal(curPos)){
-			moveNext();
+			if(moveNext() == false){
+				System.out.println("There is no Exit!");
+				return;
+			}
 			//System.out.println("move");
 		}
 		SayGoal();
@@ -31,8 +34,10 @@ public class Player {
 		}
 	}
 	
-	public void moveNext(){
+	public boolean moveNext(){
 		PosWithNext nextPos = s.findNextPos(curPos);
+		if(curPos.toString().equals(nextPos.toString()))
+			return false; //for avoid infinite loop.
 		if( !s.stack.isEmpty() && nextPos.equals(s.stack.top()) ){
 			nextPos = s.stack.pop();
 			s.visited[curPos.y][curPos.x] = true;
@@ -45,7 +50,7 @@ public class Player {
 			System.out.println(curPos.toString() +"; next:"+curPos.nextDir.toString());
 			move(nextPos);
 		}
-		return;
+		return true;
 	}
 	
 	public void move(PosWithNext target){

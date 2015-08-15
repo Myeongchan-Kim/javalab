@@ -56,6 +56,8 @@ public class Strategy {
 			y = nextPos.y;
 		}while(map.getMap()[y][x] == Geo.WALL || visited[y][x] == true);
 		
+		if(nextPos == null) 
+			return curPos; //if next is equal to current, then shout "No exit".
 		return new PosWithNext(nextPos);
 	}
 }

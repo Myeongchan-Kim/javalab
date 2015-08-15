@@ -23,7 +23,8 @@ public class FourDirection implements DirectionSet{
 
 	@Override
 	public Position nextDirection(Position curDir) {
-		for(int i =0 ; i< directionSet.length; i++){
+		for(int i =0 ; i< directionSet.length-1; i++){
+			//If final direction, can't reach here.
 			if(curDir.equals( directionSet[i] ))
 				return directionSet[i+1];
 		}
@@ -32,7 +33,10 @@ public class FourDirection implements DirectionSet{
 
 	@Override
 	public boolean isFinalDirection(Position curDir) {
-		if(WEST == curDir) return true;
+		if(WEST == curDir) {
+			
+			return true;
+		}
 		else return false;
 	}
 	

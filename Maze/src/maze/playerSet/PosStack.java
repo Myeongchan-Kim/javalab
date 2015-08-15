@@ -27,11 +27,10 @@ public class PosStack {
 	}
 	
 	public PosWithNext pop(){
-		PosWithNext tmp = this.top();
 		if(isEmpty())
 			return null;
-		else
-			stack.remove(stack.size()-1);
+		PosWithNext tmp = this.top();
+		stack.remove(stack.size()-1);
 		return tmp;
 	}
 	
