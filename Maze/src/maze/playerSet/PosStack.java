@@ -1,11 +1,10 @@
 package maze.playerSet;
 
 import java.util.ArrayList;
-
 import maze.Position;
 
 public class PosStack {
-	private ArrayList<PosWithNext> stack;
+	private ArrayList<PosWithNext> stack = null;
 	
 	public PosStack (){
 		stack = new ArrayList<PosWithNext>();

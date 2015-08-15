@@ -1,0 +1,109 @@
+package maze.playerSet;
+
+import maze.Map;
+import maze.Position;
+import maze.constant.Geo;
+
+public class Player {
+	PosWithNext curPos;
+	Strategy s;
+	
+	public Player(Position initPos, Map map, DirectionSet DirSet){
+		curPos = new PosWithNext(initPos);
+		s = new Strategy( map , DirSet);
+		curPos.nextDir = null;
+		System.out.println("Player created");
+	}
+	
+	public Player (int y, int x){
+		this(new Position(y,x), null, null);
+	}
+	
+	public void findRoot(){
+		while(!s.isGoal(curPos)){
+			if(moveNext() == false){
+				System.out.println("There is no Exit!");
+				return;
+			}
+			//System.out.println("move");
+		}
+		SayGoal();
+		System.out.println("Histroy : (from Goal by reverse)");
+		
+		PosWithNext pos;
+		while((pos = s.stack.pop()) != null){
+			System.out.println(pos);
+		}
+	}
+	
+	public boolean moveNext(){
+		PosWithNext nextPos = s.findNextPos(curPos);
+		if(curPos.toString().equals(nextPos.toString()))
+			return false; //for avoid infinite loop.
+		if( !s.stack.isEmpty() && nextPos.equals(s.stack.top()) ){
+			nextPos = s.stack.pop();
+			s.visited[curPos.y][curPos.x] = true;
+			System.out.println(curPos.toString() +"->"+nextPos.toString()+"(move back)");
+			move(nextPos);
+		}
+		else {
+			s.stack.push(new PosWithNext(curPos));
+			s.visited[curPos.y][curPos.x] = true;
+			System.out.println(curPos.toString() +"->"+nextPos.toString());
+			move(nextPos);
+		}
+		return true;
+	}
+	
+	public void move(PosWithNext target){
+		if(target == null) {
+			System.out.println("null target.");
+			return;
+		}
+		if(	target.y >= s.map.getMapHeight()	|| target.y <= 0 ||
+			target.x >= s.map.getMapWidth()		|| target.x <= 0){
+			System.out.println("out of map.");
+			return;
+		}
+		
+		curPos.x = target.x;
+		curPos.y = target.y;
+		curPos.nextDir = target.nextDir;
+		
+		//SayPosition();
+	}
+	
+	private void SayPosition(){
+		System.out.println("CurPos :" + curPos.toString());
+	}
+	
+	private void SayGoal(){
+		SayPosition();
+		System.out.println("I got GOAL!");
+	}
+	
+	private void printWithPath(){
+		if(map == null || mapHeight < 1 || mapWidth < 1) {
+			System.out.println("Ivaild Map");
+			return;
+		}
+		System.out.println("Start : "+this.start);
+		System.out.println("Goal : "+this.goal);
+		
+		for (int i=0; i<mapHeight; i++){
+			for(int j=0; j<mapWidth; j++){
+				if(map[i][j] == Geo.WALL)
+					System.out.print("WW");
+				else if(goal.x == j && goal.y ==i)
+					System.out.print("g ");
+				else if(start.x == j && i == start.y)
+					System.out.print("s ");
+				else if (map[i][j] == Geo.EMPTY)
+					System.out.print("  ");
+			}
+			System.out.print("\n");
+		}
+		
+	}
+
+}

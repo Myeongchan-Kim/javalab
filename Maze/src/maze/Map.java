@@ -1,6 +1,8 @@
 package maze;
 
 import maze.constant.Geo;
+import maze.playerSet.PosStack;
+import maze.playerSet.PosWithNext;
 
 public class Map {
 	private int [][] mapInfo; 
@@ -74,6 +76,35 @@ public class Map {
 		}
 		
 	}
+	public void printMap(PosStack stack){
+		if(stack ==null || map == null || mapHeight < 1 || mapWidth < 1) {
+			System.out.println("Ivaild Map or stack");
+			return;
+		}
+		
+		System.out.println("Histroy");
+		
+		PosWithNext pos;
+		while((pos = stack.pop()) != null){
+			map[pos.y][pos.x]= Geo.PATH;
+		}
+		for (int i=0; i<mapHeight; i++){
+			for(int j=0; j<mapWidth; j++){
+				if(map[i][j] == Geo.WALL)
+					System.out.print("WW");
+				else if(goal.x == j && goal.y ==i)
+					System.out.print("g ");
+				else if(start.x == j && i == start.y)
+					System.out.print("s ");
+				else if(map[i][j] == Geo.PATH)
+					System.out.print("* ");
+				else if (map[i][j] == Geo.EMPTY)
+					System.out.print("  ");
+			}
+			System.out.print("\n");
+		}
+		
+	}	
 
 	public int [][] getMapInfo() {
 		return mapInfo;

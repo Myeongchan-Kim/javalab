@@ -22,8 +22,19 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="arraylist.AccountManagerArrayList"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.util.TreeSet"/>
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="maze.constant.Geo"/>
+<fullyQualifiedTypeName name="maze.playerSet.DirectionSet"/>
+<fullyQualifiedTypeName name="maze.Map"/>
+<fullyQualifiedTypeName name="maze.playerSet.PosWithNext"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="maze.playerSet.Player"/>
+<fullyQualifiedTypeName name="maze.Position"/>
+<fullyQualifiedTypeName name="maze.playerSet.EightDirection"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="maze.playerSet.FourDirection"/>
+<fullyQualifiedTypeName name="maze.playerSet.KnightMove"/>
 </qualifiedTypeNameHistroy>

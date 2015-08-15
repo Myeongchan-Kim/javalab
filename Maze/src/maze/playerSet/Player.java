@@ -2,10 +2,12 @@ package maze.playerSet;
 
 import maze.Map;
 import maze.Position;
+import maze.constant.Geo;
 
 public class Player {
 	PosWithNext curPos;
 	Strategy s;
+	int totalMove = 0;
 	
 	public Player(Position initPos, Map map, DirectionSet DirSet){
 		curPos = new PosWithNext(initPos);
@@ -24,14 +26,11 @@ public class Player {
 				System.out.println("There is no Exit!");
 				return;
 			}
-			//System.out.println("move");
 		}
+		s.stack.push(curPos); // push last position
 		SayGoal();
-		System.out.println("Histroy : (from Goal by reverse)");
-		PosWithNext pos;
-		while((pos = s.stack.pop()) != null){
-			System.out.println(pos);
-		}
+		s.map.printMap(s.stack);
+		System.out.println("Total move : "+totalMove);
 	}
 	
 	public boolean moveNext(){
@@ -64,6 +63,7 @@ public class Player {
 			return;
 		}
 		
+		totalMove++;
 		curPos.x = target.x;
 		curPos.y = target.y;
 		curPos.nextDir = target.nextDir;
@@ -79,5 +79,5 @@ public class Player {
 		SayPosition();
 		System.out.println("I got GOAL!");
 	}
-
+	
 }

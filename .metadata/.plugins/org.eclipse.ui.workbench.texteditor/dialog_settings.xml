@@ -8,6 +8,8 @@
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="System"/>
+			<item value="print"/>
 			<item value="아룸"/>
 		</list>
 		<list key="replacehistory">
