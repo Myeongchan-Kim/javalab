@@ -1,0 +1,30 @@
+package main;
+
+import maze.Map;
+import maze.Position;
+import maze.playerSet.EightDirection;
+import maze.playerSet.FourDirection;
+import maze.playerSet.Player;
+
+public class MazeTest {
+
+	public static void main(String[] args) {
+		Map level1 = new Map(new int[][]{
+				{0,1,1,1,0,1,1,1},
+				{0,0,0,1,0,0,0,0},
+				{1,1,0,0,0,1,0,1},
+				{1,1,0,1,1,1,0,1},
+				{1,0,0,1,0,0,0,0},
+				{0,1,1,1,0,1,1,1},
+				{1,0,1,1,0,0,0,0},
+				{0,1,1,0,1,1,1,0}
+				},new Position(1,1), new Position(8,8));
+		level1.printMap();
+		
+		Player kim = new Player(level1.getStart(), level1, new FourDirection());
+		kim.findRoot();
+		
+		Player lee = new Player(level1.getStart(), level1, new EightDirection());
+	}
+
+}

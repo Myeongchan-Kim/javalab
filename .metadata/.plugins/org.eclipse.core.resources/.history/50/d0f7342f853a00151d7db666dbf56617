@@ -1,0 +1,12 @@
+package scoreSystem;
+
+public class Subject {
+	String name;
+	boolean isPF;
+	
+	public Subject (String name){
+		name = this.name;
+		isPF = false;
+	}
+
+}

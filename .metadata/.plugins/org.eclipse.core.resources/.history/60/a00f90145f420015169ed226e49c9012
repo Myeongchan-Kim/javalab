@@ -1,0 +1,6 @@
+package constants;
+
+public enum Geometry {
+	static final int WALL = 1;
+	static final int EMPTY = 0;
+}

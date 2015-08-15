@@ -1,0 +1,21 @@
+package maze.playerSet;
+
+import maze.Map;
+
+public class Strategy {
+	Map map;
+	PosStack stack;
+	DirectionSet DirSet;
+	
+	public Strategy (Map map, DirectionSet DirSet){
+		this.map = map;
+		this.DirSet = DirSet;
+	}
+	
+	private boolean isGoal{
+		
+	}
+	private findNextMove{
+		
+	}
+}

@@ -1,0 +1,17 @@
+package scoreSystem;
+
+import java.util.ArrayList;
+
+public class Student {
+	String name;
+	String major;
+	ArrayList<Subject> subList = School.subList;
+	
+	public Student(){
+		 
+	}
+	
+	public Student(String name, int math, int eng, String major){
+		this.name = name;
+	}
+}

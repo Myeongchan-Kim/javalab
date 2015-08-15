@@ -1,0 +1,11 @@
+package maze.playerSet;
+
+import maze.Map;
+
+public class Strategy {
+	Map map;
+	PosStack stack;
+	public Strategy (Map map){
+		this.map = new Map(map.info)
+	}
+}

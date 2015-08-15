@@ -9,8 +9,21 @@
 <fullyQualifiedTypeName name="shipping.Truck"/>
 <fullyQualifiedTypeName name="shipping.Company"/>
 <fullyQualifiedTypeName name="shipping.RiverBarge"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar"/>
 <fullyQualifiedTypeName name="ex6_20.Shuffle"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="userinfo.UserInfo"/>
+<fullyQualifiedTypeName name="userinfo.dao.UserInfoDaoOracle"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="userinfo.dao.IUserInfoDao"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="scoreSystem.School"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="arraylist.AccountManagerArrayList"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
 </qualifiedTypeNameHistroy>

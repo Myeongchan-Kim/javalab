@@ -1,0 +1,30 @@
+package scoreSystem;
+
+import java.util.ArrayList;
+
+public class Student {
+	String name;
+	int id;
+	Subject major;
+	School sc = School.getInstance();
+	ArrayList<Subject> subList = sc.subList;
+	
+	public Student(){
+		 
+	}
+	
+	public Student(String name,  int id, Subject major){
+		int majorIdx = subList.indexOf(major);
+		
+		this.name 	= name;
+		this.id 	= id;
+		this.major 	= subList.get(majorIdx);
+	}
+	
+	public void addScore(String subName, int score){
+		int subIdx = subList.indexOf(subName);
+		Subject tmp = subList.get(subIdx);
+		tmp.score = score;
+		subList.set(subIdx, tmp);
+	}
+}

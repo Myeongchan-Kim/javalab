@@ -1,0 +1,17 @@
+package object;
+
+class Dog{
+	String name;
+	String type;
+	
+	public Dog(String name, String type){
+		this.name = name;
+		this.type = type;
+	}
+}
+public class ObjectTest {
+	public static void main (String args[]){
+		
+		Dog myDog = new Dog("Bow wow","Usual Dog");
+	}
+}

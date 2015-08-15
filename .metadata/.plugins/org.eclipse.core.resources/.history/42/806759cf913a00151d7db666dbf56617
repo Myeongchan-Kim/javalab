@@ -1,0 +1,14 @@
+package scoreSystem;
+
+public class English extends Subject{
+	static English e = new English("english");
+	
+	private English ( String name ){
+		super(name);
+	}
+	
+	public static English getInstace(){
+		return e;
+	}
+	
+}

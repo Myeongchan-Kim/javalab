@@ -1,0 +1,33 @@
+package maze.playerSet;
+
+import maze.Map;
+import maze.Position;
+
+public class Strategy {
+	Map map;
+	PosStack stack;
+	DirectionSet DirSet;
+	
+	public Strategy (Map map, DirectionSet DirSet){
+		this.map = map;
+		this.DirSet = DirSet;
+		stack = new PosStack();
+	}
+	
+	private boolean isGoal(Position curPos){
+		if(curPos == map.getGoal())
+			return true;
+		else return false;
+	}
+	private Position findNextMove(Position curPos, Position nextDirection){
+		if(curPos == null) return null;
+		if(curPos == map.getGoal())
+			return null;
+		if(nextDirection == null) 
+			return curPos.add(DirSet.firstDirection());
+		else if(DirSet.isFinalDirection(nextDirection))
+			return stack.top();
+		else 
+			return curPos.add(nextDirection);
+	}
+}

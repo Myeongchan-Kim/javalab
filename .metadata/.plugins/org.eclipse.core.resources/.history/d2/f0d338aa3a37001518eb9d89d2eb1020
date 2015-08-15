@@ -1,0 +1,22 @@
+package object;
+
+class MyDate{
+	int year;
+	int month;
+	int day;
+	
+	MyDate(int day, int month, int year){
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+}
+
+public class MyDateTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

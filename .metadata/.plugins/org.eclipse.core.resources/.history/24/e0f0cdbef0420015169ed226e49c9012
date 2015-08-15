@@ -1,0 +1,65 @@
+package maze.playerSet;
+
+import maze.Map;
+import maze.Position;
+import maze.constant.*;
+
+public class Player {
+	PosWithNext curPos;
+	Strategy s;
+	
+	public Player(Position initPos, Map map, DirectionSet DirSet){
+		curPos.x = initPos.x;
+		curPos.y = initPos.y;
+		s = new Strategy( map , DirSet);
+		curPos.nextDir = null;
+	}
+	
+	public Player (int x, int y){
+		this(new Position(x,y), null, null);
+	}
+	
+	public void findRoot(){
+		while(s.isGoal(curPos) == false){
+			
+		}
+		SayGoal();
+	}
+	
+	public void moveNext(){
+		PosWithNext nextPos = s.findNextPos(curPos);
+		if( nextPos.equals( s.stack.top()) ){
+			nextPos = s.stack.pop();
+			move(nextPos);
+		}
+		else {
+			s.stack.push(curPos);
+			System.out.println(curPos.toString() +"; next:"+curPos.nextDir.toString());
+			move(nextPos);
+		}
+		return;
+	}
+	
+	public void move(Position target){
+		if(target == null) {
+			System.out.println("null target.");
+			return;
+		}
+		if(target.x < s.map.getMapHeight())
+		
+		curPos.x = target.x;
+		curPos.y = target.y;
+		
+		SayPosition();
+	}
+	
+	private void SayPosition(){
+		System.out.println("CurPos :" + curPos.toString());
+	}
+	
+	private void SayGoal(){
+		SayPosition();
+		System.out.println("I got GOAL!");
+	}
+
+}

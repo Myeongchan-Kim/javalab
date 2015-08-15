@@ -1,0 +1,6 @@
+package videoshop;
+
+public interface Shop {
+	protected ArrayList<String> shelf = new ArrayList<String> ();
+	
+}

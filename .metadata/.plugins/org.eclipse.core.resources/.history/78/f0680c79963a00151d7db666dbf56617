@@ -1,0 +1,14 @@
+package scoreSystem;
+
+public class Math extends Subject{
+	static Math m = new Math("math");
+	
+	private Math ( String name ){
+		super(name);
+	}
+	
+	public static Math getInstace(){
+		return m;
+	}
+	
+}

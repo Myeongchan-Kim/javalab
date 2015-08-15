@@ -1,0 +1,35 @@
+package maze;
+
+public class Map {
+	int [][] mapInfo; 
+	int mapWidth;
+	int mapHeight;
+	int [][] map;
+	
+	public Map (int w, int h){
+		mapInfo = new int[w][h];
+		mapWidth 	= w+1;
+		mapHeight 	= h+1;
+		
+		
+	}
+	
+	public Map ( int [][]info){
+		if(info== null || info.length < 1 || info[0].length < 1 ) return;
+		
+		map = makeMap(info);
+	}
+	
+	public int[][] makeMap(int [][] info){
+		int [][]map;
+		mapInfo 	= info;
+		mapHeight	= info.length;
+		mapWidth 	= info[0].length; 
+		
+		for (int i=0; i<mapHeight; i++){
+			
+		}
+		
+		return map;
+	}
+}

@@ -1,0 +1,8 @@
+package scoreSystem;
+
+public interface Report {
+	
+	public static char changeScoretoGrade(int score) {
+		return 0;
+	}
+}

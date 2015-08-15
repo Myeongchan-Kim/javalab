@@ -1,0 +1,23 @@
+package main;
+
+import maze.*;
+
+public class MazeTest {
+
+	public static void main(String[] args) {
+		Map level1 = new Map(new int[][]{
+				{0,1,1,1,0,1,1,1},
+				{0,0,0,1,0,0,0,0},
+				{1,1,0,0,0,1,0,1},
+				{1,1,0,1,1,1,0,1},
+				{1,0,0,1,0,0,0,0},
+				{0,1,1,1,0,1,1,1},
+				{1,0,1,1,0,0,0,0},
+				{0,1,1,0,1,1,1,0}
+				});
+		level1.printMap();
+		
+		Player kim = new Player();
+	}
+
+}

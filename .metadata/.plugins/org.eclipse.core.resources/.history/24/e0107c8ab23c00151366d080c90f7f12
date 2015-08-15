@@ -1,0 +1,16 @@
+package arraylist;
+
+import java.util.ArrayList;
+
+public class AccountManagerArrayList {
+	
+	public ArrayList<Account> accounts;
+	
+	public AccountManagerArrayList(){
+		
+	}
+	
+	public AccountManagerArrayList(int size){
+		accounts = new ArrayList<Account>(size);
+	}
+}

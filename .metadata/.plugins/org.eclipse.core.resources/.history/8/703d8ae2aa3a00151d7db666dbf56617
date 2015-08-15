@@ -1,0 +1,43 @@
+package scoreSystem;
+
+import java.util.ArrayList;
+
+public class TestData {
+	ArrayList<Student> slist = new ArrayList<Student>();
+	
+	public TestData(){
+		
+		Student st = new Student("이승기", 141213, "math");
+		st.addScore("math",  95);
+		st.addScore("english",  20);
+		
+		this.slist.add(st);
+		Student st = new Student("이승기", 141213, "math");
+		st.addScore("math",  95);
+		st.addScore("english",  20);
+		
+		this.slist.add(st);
+		Student st = new Student("이승기", 141213, "math");
+		st.addScore("math",  95);
+		st.addScore("english",  20);
+		
+		this.slist.add(st);
+		Student st = new Student("이승기", 141213, "math");
+		st.addScore("math",  95);
+		st.addScore("english",  20);
+		
+		this.slist.add(st);
+		Student st = new Student("이승기", 141213, "math");
+		st.addScore("math",  95);
+		st.addScore("english",  20);
+		
+		this.slist.add(st);
+		Student st = new Student("이승기", 141213, "math");
+		st.addScore("math",  95);
+		st.addScore("english",  20);
+		
+		this.slist.add(st);
+		
+	}
+
+}

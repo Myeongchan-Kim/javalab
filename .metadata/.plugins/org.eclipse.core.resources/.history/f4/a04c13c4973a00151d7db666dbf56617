@@ -1,0 +1,15 @@
+package scoreSystem;
+
+public class Score {
+	int math;
+	int eng;
+	
+	public Score(){
+	}
+	
+	public Score (int math, int eng){
+		this.math = math;
+		this.eng = eng;
+	}
+
+}

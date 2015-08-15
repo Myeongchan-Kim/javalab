@@ -1,0 +1,12 @@
+package userinfo.web;
+
+import userinfo.UserInfo;
+
+public class UserInfoWeb {
+
+	public static void main(String[] args) {
+		
+		UserInfo u1 = new UserInfo();
+	}
+
+}

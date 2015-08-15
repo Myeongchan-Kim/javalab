@@ -1,0 +1,8 @@
+package maze;
+
+import java.lang.reflect.Array;
+
+public class Map {
+	int [][] mapInfo; 
+
+}

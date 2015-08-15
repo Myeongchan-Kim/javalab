@@ -1,0 +1,17 @@
+package maze.playerSet;
+
+import maze.Position;
+
+public class PosWithNext extends Position{
+	Position next;
+	
+	public PosWithNext (Position pos, Position direction){
+		x = pos.x;
+		y = pos.y;
+		next = direction;
+	}
+	
+	public PosWithNext add(PosWithNext){
+		super.add()
+	}
+}

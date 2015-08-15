@@ -1,0 +1,36 @@
+package scoreSystem;
+
+public class Report1 implements Report{
+
+
+	@Override
+	public static char majorGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public static char minorGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public static Student reportStudent(Student st) {
+		for(int i =0; i< st.subList.size(); i++){
+			Subject sub = st.subList.get(i);
+			if(sub.toString() == st.major.toString())
+				sub.grade = Report1.majorGrade(sub.score);
+			else
+				sub.grade = Report1.minorGrade(sub.score);
+		}
+		return st;
+	}
+
+	@Override
+	public static void reportSchool() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

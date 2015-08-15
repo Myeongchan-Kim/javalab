@@ -1,0 +1,16 @@
+package scoreSystem;
+
+public class Student {
+	String name;
+	Score score;
+	String major;
+	
+	public Student(){
+		 
+	}
+	
+	public Student(String name, int math, int eng, String major){
+		this.name = name;
+		score = new Score(math, eng); 
+	}
+}

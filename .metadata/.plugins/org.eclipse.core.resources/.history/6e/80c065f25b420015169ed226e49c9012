@@ -1,0 +1,15 @@
+package maze;
+
+public class Map {
+	int [][] mapInfo; 
+	int mapWidth;
+	int mapHeight;
+	
+	public Map (int w, int h){
+		mapInfo = new int[w][h];
+	}
+	
+	public Map ( int [][]info){
+		mapInfo = info;
+	}
+}

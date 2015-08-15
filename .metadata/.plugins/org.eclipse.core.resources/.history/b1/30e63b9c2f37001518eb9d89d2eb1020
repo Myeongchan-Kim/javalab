@@ -1,0 +1,5 @@
+package videoshop;
+
+public interface IQueue {
+
+}

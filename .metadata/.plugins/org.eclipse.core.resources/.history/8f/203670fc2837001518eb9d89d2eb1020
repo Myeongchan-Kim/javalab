@@ -1,0 +1,5 @@
+package userinfo.dao;
+
+public interface IUserInfoDao {
+
+}

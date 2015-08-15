@@ -1,0 +1,30 @@
+package maze.playerSet;
+
+import maze.Position;
+
+public class PosStack {
+	public static final int DEFAUL_STACK_SIZE = 10;
+	
+	PosWithNext stack[];
+	
+	public PosStack (){
+		
+	}
+	public PosWithNext top(){
+		if(this.IsEmpty() == true) return null;
+		else return stack[stack.length-1];
+	}
+	
+	public void push(Position pos, Position next){
+		return;
+	}
+	
+	public PosWithNext pop(){
+		return null;
+	}
+	
+	public boolean IsEmpty(){
+		if(stack.length < 1) return true;
+		else return false;
+	}
+}

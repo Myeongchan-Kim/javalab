@@ -1,0 +1,12 @@
+package maze.playerSet;
+
+import maze.Position;
+
+public class Player {
+	Position pos;
+	
+	public Player (int x, int y){
+		
+	}
+
+}

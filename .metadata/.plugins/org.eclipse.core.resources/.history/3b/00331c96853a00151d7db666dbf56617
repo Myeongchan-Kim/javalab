@@ -1,0 +1,7 @@
+package scoreSystem;
+
+public class Math extends Subject{
+	private Math( String name ){
+		
+	}
+}

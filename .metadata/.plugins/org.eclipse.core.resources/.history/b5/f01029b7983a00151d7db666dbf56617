@@ -1,0 +1,23 @@
+package scoreSystem;
+
+public class Subject {
+	String name;
+	static boolean isPF;
+	int score;
+	
+	public Subject (String name){
+		name = this.name;
+		isPF = false;
+	}
+	
+	public Subject(String name, boolean pf){
+		name = this.name;
+		Subject.isPF = pf;
+	}
+	
+	public Subject(String name, int score){
+		name = this.name;
+		this.score = score;
+	}
+	
+}

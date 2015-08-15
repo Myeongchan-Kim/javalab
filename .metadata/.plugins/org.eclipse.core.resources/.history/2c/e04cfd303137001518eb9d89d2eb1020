@@ -1,0 +1,14 @@
+package videoshop;
+
+public class VideoShop extends Shop implements IQueue{
+
+	public void enQueue(String title) {
+		shelf.add(title);
+	}
+
+	public String deQueue() {
+		
+		return null;
+	}
+	
+}

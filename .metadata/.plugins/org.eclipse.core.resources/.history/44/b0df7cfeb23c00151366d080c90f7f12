@@ -1,0 +1,32 @@
+package arraylist;
+
+import java.util.ArrayList;
+
+public class AccountManagerArrayList {
+	
+	public ArrayList<Account> accounts;
+	
+	public AccountManagerArrayList(){
+		
+	}
+	
+	public AccountManagerArrayList(int size){
+		accounts = new ArrayList<Account>(size);
+	}
+	
+	public void insertAccount(String accountNumber, String accountName, float balance){
+		Account account = new Account(accountNumber, accountName, balance);
+		accounts.add(account);
+	}
+	public void setDeposite( String accountNumber, float money ){
+		for( int i=0; i< accounts.size(); i++){
+			Account acc = accounts.get(i);
+			
+			if(acc.getAccountNumber().equals(accountNumber)){
+				acc.deposite(money);
+				return;
+			}
+		}
+		System.out.println("There is no Account. has than number");
+	}
+}

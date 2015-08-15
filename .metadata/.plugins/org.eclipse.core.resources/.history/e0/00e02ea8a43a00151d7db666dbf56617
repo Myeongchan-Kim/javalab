@@ -1,0 +1,26 @@
+package scoreSystem;
+
+import java.util.ArrayList;
+
+public class School {
+	
+	static School s1 = new School();
+	
+	ArrayList<Student> stuList = new ArrayList<Student>();
+	ArrayList<Subject> subList = new ArrayList<Subject>();
+	
+	private School () {
+		subList.add(new Math());
+		subList.add(new English());
+	}
+	
+	public static School getInstance(){
+		if(s1 == null)
+			s1 = new School();
+		return s1;
+	}
+	
+	public void addStudent(Student s){
+		s1.stuList.add(s);
+	}
+}

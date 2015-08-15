@@ -1,0 +1,50 @@
+package scoreSystem;
+
+/*singletone class*/
+public class Report1 implements Report{
+
+	static Report1 r = new Report1();
+	
+	private Report1(){
+		
+	}
+	
+	public static Report1 getInstance(){
+		if(r == null)
+			r = new Report1();
+		return Report1.r;
+	}
+	
+	
+	
+	public char majorGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public char minorGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	public Student reportStudent(Student st) {
+		for(int i =0; i< st.subList.size(); i++){
+			Subject sj = st.subList.get(i);
+			
+			if(sj.name.equals(st.major.toString()))
+				sj.grade = r.majorGrade(sj.score);
+			else
+				sj.grade = r.minorGrade(sj.score);
+			
+			st.subList.set(i, sj);
+		}
+		return st;
+	}
+
+	public void reportSchool() {
+		for(int i = 0; i< i< School.stuList.size(); i++){
+			
+		}
+	}
+
+}

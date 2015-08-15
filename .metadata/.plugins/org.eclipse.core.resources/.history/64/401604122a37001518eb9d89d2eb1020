@@ -1,0 +1,21 @@
+package userinfo.web;
+
+import userinfo.UserInfo;
+import userinfo.dao.oracle.UserInfoDaoOracle;
+
+public class UserInfoWeb {
+
+	public static void main(String[] args) {
+		
+		UserInfo u1 = new UserInfo("Paul1985", "123", "Paul");
+		UserInfo u2 = new UserInfo("kmc5500", "111", "Kim");
+		
+		UserInfoDaoOracle dao = new UserInfoDaoOracle();
+		
+		dao.insertUserInfo(u1);
+		dao.deleteUserInfo(u1);
+		dao.updateUserInfo(u1);
+		
+	}
+
+}

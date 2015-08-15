@@ -1,0 +1,52 @@
+package scoreSystem;
+
+import java.util.ArrayList;
+
+public class Student {
+	String name;
+	int id;
+	Subject major;
+	ArrayList<Subject> subList = School.getInstance().subList;
+	
+	public Student(){
+		
+	}
+	
+	public Student(String name, int id){
+		this.name 	= name;
+		this.id 	= id;
+	}
+	
+	public Student(String name,  int id, String majorName){
+		this(name, id);
+		
+		Subject sub = findSubject(majorName);
+		this.major 	= sub;
+	}
+	
+	
+	public Student(String name,  int id, Subject major){
+		this(name, id);
+		int majorIdx = subList.indexOf(major);
+		this.major 	= subList.get(majorIdx);
+	}
+	
+	public void addScore(String subName, int score){
+		Subject tmp = this.findSubject(subName);
+		int subIdx = subList.indexOf(tmp);
+		
+		if(tmp == null ) return;
+		tmp.score = score;
+		subList.set(subIdx, tmp);
+	}
+
+	public Subject findSubject(String subName){
+		for(int i=0; i< subList.size(); i++){
+			Subject sub = subList.get(i);
+			System.out.println(sub.name);
+			if(sub.name == subName)
+				return sub;
+		}
+		return null;
+	}
+}

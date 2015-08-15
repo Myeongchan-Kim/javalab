@@ -1,0 +1,6 @@
+package scoreSystem;
+
+public interface Report {
+	
+	public abstract char changeScoretoGrade(int score) ;
+}

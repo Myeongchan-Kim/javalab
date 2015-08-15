@@ -1,0 +1,23 @@
+package scoreSystem;
+
+public class Report1 implements Report{
+
+	@Override
+	public char changeScoretoGrade(int score) {
+		
+		return 0;
+	}
+
+	@Override
+	public Student reportStudent(Student st) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void reportSchool() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

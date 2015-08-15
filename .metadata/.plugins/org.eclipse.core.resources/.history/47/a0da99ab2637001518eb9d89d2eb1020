@@ -1,0 +1,9 @@
+package userinfo.dao;
+
+import userinfo.UserInfo;
+
+public class UserInfoDaoOracle {
+	public void insertUserInfo(UserInfo userinfo){
+		
+	}
+}

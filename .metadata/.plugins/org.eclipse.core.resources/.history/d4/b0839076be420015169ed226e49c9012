@@ -1,0 +1,27 @@
+package maze.playerSet;
+
+import maze.Map;
+import maze.Position;
+
+public class Player {
+	Position curPos;
+	Strategy s;
+	
+	public Player(Position initPos, Map map, DirectionSet DirSet){
+		curPos.x = initPos.x;
+		curPos.y = initPos.y;
+		s = new Strategy( new Map(map.getMapInfo()) , DirSet);
+	}
+	
+	public Player (int x, int y){
+		this(new Position(x,y), null, null);
+	}
+	
+	public void move(Position direction){
+		if(direction == null || (direction.x==0 && direction.y==0) )return;
+		if(curPos.add(direction).x > s.map.getMap()[0].length
+		|| curPos.add(direction).y > s.map.getMap().length) return;
+		curPos = curPos.add(direction);
+	}
+
+}

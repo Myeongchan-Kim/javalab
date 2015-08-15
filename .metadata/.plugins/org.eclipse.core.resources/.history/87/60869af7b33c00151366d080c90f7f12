@@ -1,0 +1,9 @@
+package arraylist;
+
+public class AccountArrayListTest {
+	public static void ain (String[] args){
+		AccountManagerArrayList manager = new AccountManagerArrayList();
+		
+		manager.insertAccount("1231", "Paul", 3000f);
+	}
+}

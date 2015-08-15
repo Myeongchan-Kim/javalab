@@ -1,0 +1,8 @@
+package maze.playerSet;
+
+import maze.Position;
+
+public class PosStack {
+	public static final int DEFAUL_STACK_SIZE = 2;
+	Position stack[];
+}

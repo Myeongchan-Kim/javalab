@@ -1,0 +1,12 @@
+package scoreSystem;
+
+public class English extends Subject{
+
+	public English(){
+		super("english");
+	}
+	
+	public String toString(){
+		return name;
+	}
+}

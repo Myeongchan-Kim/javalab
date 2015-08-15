@@ -1,0 +1,10 @@
+package maze;
+
+import java.lang.reflect.Array;
+
+public class Map {
+	Array row = new Array();
+	Array map = new Array();
+	
+
+}

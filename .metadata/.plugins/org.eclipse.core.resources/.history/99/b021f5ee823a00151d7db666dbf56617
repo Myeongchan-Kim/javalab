@@ -1,0 +1,11 @@
+package scoreSystem;
+
+public class Student {
+	String name;
+	int mathScore;
+	int engScore;
+	String major;
+	 public Student(){
+		 
+	 }
+}

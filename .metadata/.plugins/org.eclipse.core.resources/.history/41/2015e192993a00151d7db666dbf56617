@@ -1,0 +1,19 @@
+package scoreSystem;
+
+import java.util.ArrayList;
+
+public class Student {
+	String name;
+	Subject major;
+	ArrayList<Subject> subList = School.subList;
+	
+	public Student(){
+		 
+	}
+	
+	public Student(String name,  Subject major){
+		this.name = name;
+		int majorIdx = subList.indexOf(major);
+		major = subList.get(majorIdx);
+	}
+}

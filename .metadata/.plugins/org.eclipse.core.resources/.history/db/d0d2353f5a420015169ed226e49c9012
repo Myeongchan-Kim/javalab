@@ -1,0 +1,6 @@
+package maze.playerSet;
+
+public class Player {
+	Position pos = new Position(0,0);
+
+}

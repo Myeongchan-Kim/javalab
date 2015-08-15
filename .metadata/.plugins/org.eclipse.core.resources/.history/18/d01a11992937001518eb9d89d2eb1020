@@ -1,0 +1,26 @@
+package userinfo.dao.mysql;
+
+import userinfo.UserInfo;
+import userinfo.dao.IUserInfoDao;
+
+public class UserInfoDaoMySql implements IUserInfoDao{
+
+	@Override
+	public void insertUserInfo(UserInfo userInfo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteUserInfo(UserInfo userInfo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateUserInfo(UserInfo userInfo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

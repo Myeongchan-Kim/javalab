@@ -1,0 +1,6 @@
+package maze.playerSet;
+
+public class Position {
+	int x;
+	int y;
+}

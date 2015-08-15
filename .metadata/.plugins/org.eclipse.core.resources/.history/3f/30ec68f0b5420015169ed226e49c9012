@@ -1,0 +1,5 @@
+package maze.playerSet;
+
+public class PosWithNext {
+
+}

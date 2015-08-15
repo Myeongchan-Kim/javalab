@@ -1,0 +1,9 @@
+package userinfo;
+
+public class UserInfo {
+	private String userId;
+	private String userPasswd;
+	private String userName;
+	
+	
+}

@@ -1,0 +1,37 @@
+package maze;
+
+public class Position {
+	public int x;
+	public int y;
+	
+	public Position(){
+		this(0,0);
+	}
+	
+	public Position (int x,int y){
+		this.x = x;
+		this.y = y;
+	}
+	
+	public Position add(int dx, int dy){
+		x += dx;
+		y += dy;
+		return new Position(x,y);
+	}
+	
+	public Position add(Position delta){
+		x += delta.x;
+		y += delta.y;
+		return new Position(x,y);
+	}
+	
+	public boolean equals(Position pos){
+		if(pos.x == this.x && pos.y == this.y)
+			return true;
+		return false;
+	}
+	
+	public String toString(){
+		return ""+x+", "+y;
+	}
+}

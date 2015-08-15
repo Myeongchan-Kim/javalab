@@ -1,0 +1,32 @@
+package scoreSystem;
+
+public class Report1 implements Report{
+
+
+	@Override
+	public char majorGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public char minorGrade(int score) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public Student reportStudent(Student st) {
+		for(int i =0; i< st.subList.size(); i++){
+			
+		}
+		return null;
+	}
+
+	@Override
+	public void reportSchool() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

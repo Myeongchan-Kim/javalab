@@ -1,0 +1,7 @@
+package scoreSystem;
+
+public class TestData {
+	ArrayLsit<Student> slist = new ArrayList<Student>();
+	
+
+}

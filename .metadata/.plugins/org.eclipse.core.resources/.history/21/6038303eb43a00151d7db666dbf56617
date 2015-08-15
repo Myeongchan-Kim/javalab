@@ -1,0 +1,12 @@
+package scoreSystem;
+
+public class Math extends Subject{
+	
+	@Override
+	public Math() {
+		super("math");
+	}
+	
+
+}
+

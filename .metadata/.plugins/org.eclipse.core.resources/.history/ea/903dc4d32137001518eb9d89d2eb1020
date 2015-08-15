@@ -1,0 +1,5 @@
+package calc;
+
+public interface ICalc {
+	/*public abstract*/ void add( int num1, int num2);
+}
