@@ -1,0 +1,7 @@
+package ticketBox;
+
+import customer.Row;
+
+public class RowForTicket extends Row{
+
+}

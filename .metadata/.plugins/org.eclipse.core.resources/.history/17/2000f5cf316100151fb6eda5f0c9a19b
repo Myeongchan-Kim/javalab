@@ -1,0 +1,5 @@
+package ticketBox;
+
+public class Platform extends Row{
+
+}

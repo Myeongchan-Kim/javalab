@@ -1,0 +1,29 @@
+package ticketBox;
+
+import java.util.ArrayList;
+
+@SuppressWarnings("serial")
+public class TicketCenter extends ArrayList<Ticketer>{
+	public int limitOfTickter;
+	
+	public TicketCenter (int limitOfTickter){
+		this.limitOfTickter = limitOfTickter;
+
+		for( int i =0; i< limitOfTickter; i++)
+			this.add(new Ticketer());
+	
+	}
+	
+	public void treatCustomer(){
+		for( int i= 0 ; i< this.size(); i++){
+			this.get(i).treatCustomer();
+		}
+	}
+	
+	public boolean add(Ticketer t){
+		if(this.size() >= limitOfTickter)
+			return false;
+		super.add(t);
+		return true;
+	}
+}

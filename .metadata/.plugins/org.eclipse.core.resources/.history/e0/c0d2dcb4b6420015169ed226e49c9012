@@ -1,7 +1,0 @@
-package maze.playerSet;
-
-import maze.Position;
-
-public class PosStack {
-	Position stack[];
-}

@@ -1,9 +1,0 @@
-package maze;
-
-public class Map {
-	int [][] mapInfo; 
-	
-	public Map (int w, int h){
-		mapInfo = new int[w][h];
-	}
-}

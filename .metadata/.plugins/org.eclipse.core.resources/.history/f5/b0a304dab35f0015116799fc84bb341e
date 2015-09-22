@@ -1,0 +1,7 @@
+package customer;
+
+import java.util.Queue;
+
+public class QueForTrain implements Queue{
+
+}

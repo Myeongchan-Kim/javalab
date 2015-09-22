@@ -1,0 +1,20 @@
+package ticketBox;
+
+import customer.Customer;
+
+public class Ticketer {
+	Customer myCustomer;
+	public void reciveCustomer(Customer newCustomer){
+		if(myCustomer != null){
+			this.myCustomer = newCustomer;
+			this.myCustomer.gotoTicketer();
+		}
+		else
+			changeCustomer(newCustomer);
+
+	}
+	
+	private void changeCustomer(Customer newComer){
+		
+	}
+}

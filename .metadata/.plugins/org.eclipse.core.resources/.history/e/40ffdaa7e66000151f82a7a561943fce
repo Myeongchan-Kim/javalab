@@ -1,0 +1,14 @@
+package ticketBox;
+
+import customer.Customer;
+
+public class Ticketer {
+	Customer myCustomer;
+	public void reciveCustomer(Customer newCustomer){
+		if(myCustomer)
+			this.myCustomer = newCustomer;
+		else
+			changeCustomer(newCustomer);
+
+	}
+}

@@ -1,0 +1,10 @@
+package customer;
+
+public class RowForTicket extends CustomerList{
+
+	public RowForTicket(String fileName) {
+		super(fileName);
+		// TODO Auto-generated constructor stub
+	}
+
+}

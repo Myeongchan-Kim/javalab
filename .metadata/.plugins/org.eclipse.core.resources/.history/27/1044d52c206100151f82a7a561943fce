@@ -1,0 +1,7 @@
+package strategy;
+
+public class TimeTable {
+	public static int getTripTime(String depart, String destination){
+		
+	}
+}

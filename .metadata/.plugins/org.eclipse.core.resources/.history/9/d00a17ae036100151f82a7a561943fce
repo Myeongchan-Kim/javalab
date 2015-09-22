@@ -1,0 +1,88 @@
+package customer;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Iterator;
+
+import customer.Customer.Status;
+
+@SuppressWarnings("serial")
+public class CustomerList extends Row {
+
+	public CustomerList(String fileName) {
+
+		String csvFile = fileName;
+		BufferedReader br = null;
+		String line = "";
+		String cvsSplitBy = ","; //separator
+	
+		try {
+			//id,name,onTime,ticketingTime,arrival,destination
+			
+			br = new BufferedReader(new FileReader(csvFile));
+			while ((line = br.readLine()) != null) {
+				
+			    String[] words = line.split(cvsSplitBy); //',' is separator
+			    if(words[0].equals("id"))
+			    	continue; //skip first line
+			   
+			    this.add(new Customer( 	Integer.parseInt(words[0]), // id 
+										words[1], //name
+										Integer.parseInt(words[2]), //on time
+										Integer.parseInt(words[3]), //ticketing time
+										words[4], words[5] //arrival, destination
+										));
+			}
+	
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	
+		System.out.println("File input Done");
+	}
+
+
+	public boolean isAllFinished() {
+		
+		Iterator<Customer> i = this.iterator();
+		while(i.hasNext()){
+			if(i.next().status != Status.finished)
+				return false;
+		}
+		return true;
+	}
+	
+	public void showAllCustomer(){
+		Iterator<Customer> i = this.iterator();
+		while (i.hasNext()){
+			System.out.println(i.next().name);
+		}
+	}
+	
+	public void timeSpend(){
+		Iterator<Customer> i = this.iterator();
+		while(i.hasNext()){
+			i.next().timeSpend();
+		}
+	}
+	
+
+	public static void newCustomersCome(RowForTicket ticketRow) {
+		Iterator<Customer> i = this.iterator();
+		while(i.hasNext()){
+			 
+		}
+	}
+}

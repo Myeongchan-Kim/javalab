@@ -1,0 +1,9 @@
+package strategy;
+
+import customer.Customer;
+
+public interface Strategy {
+	public Customer getCustomer{
+		
+	}
+}

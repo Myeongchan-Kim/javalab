@@ -1,0 +1,24 @@
+package strategy;
+
+import customer.Customer;
+import ticketBox.Row;
+
+public class Strategy_FIFO implements Strategy{
+	
+	@Override
+	public Customer getCustomer(Row row) {
+		return getCustomer(row, 1).get(0);
+	}
+
+	@Override
+	public Row getCustomer(Row row, int num) {
+		Row result = new Row();
+
+		result.add(row.get(0));
+		result.add(row.get(0));
+		result.add(row.get(0));
+		
+		return result;
+	}
+	
+}

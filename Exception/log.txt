@@ -1,0 +1,6 @@
+8월 28, 2015 11:07:36 오전 logging.MyLogger warning
+경고: name must not be null
+8월 28, 2015 11:07:36 오전 logging.MyLogger warning
+경고: Too many arguments
+8월 28, 2015 11:07:36 오전 logging.MyLogger fine
+미세: begin get Student()

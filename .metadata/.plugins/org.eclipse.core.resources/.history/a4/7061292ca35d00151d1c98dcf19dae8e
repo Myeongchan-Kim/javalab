@@ -1,0 +1,25 @@
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+
+public class ShowInfo {
+
+	public static void main(String[] args) {
+		
+		Class c = Integer.class;
+		
+		System.out.println(c.getName());
+		
+		Constructor[] cons = c.getConstructors();
+		
+		for ( Constructor con : cons ){
+			System.out.println(con);
+		}
+		
+		Method[] m = c.getMethods();
+		
+		for ( Method method : m){
+			System.out.println(method);
+		}
+	}
+
+}

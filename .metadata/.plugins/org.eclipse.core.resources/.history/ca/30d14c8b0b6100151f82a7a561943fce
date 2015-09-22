@@ -1,0 +1,23 @@
+package strategy;
+
+import customer.Customer;
+import customer.Row;
+
+public class Strategy_FIFO implements Strategy{
+	
+	public Customer getCustomer(){
+		
+	}
+	
+	@Override
+	public Customer getCustomer(Row row) {
+		return null;
+	}
+
+	@Override
+	public Customer getCustomer(Row row, int num) {
+		
+		return null;
+	}
+	
+}

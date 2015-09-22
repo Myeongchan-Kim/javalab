@@ -1,0 +1,45 @@
+package ticketBox;
+
+import java.util.ArrayList;
+
+import customer.Customer;
+import customer.CustomerList;
+import customer.Platform;
+import customer.RowForTicket;
+import strategy.Strategy;
+
+@SuppressWarnings("serial")
+public class TicketCenter extends ArrayList<Ticketer>{
+	public int limitOfTickter;
+	Strategy strategy;
+	
+	public TicketCenter (int limitOfTickter, Strategy strategy){
+		this.limitOfTickter = limitOfTickter;
+		this.strategy = strategy;
+		
+		for( int i =0; i< limitOfTickter; i++)
+			this.add(new Ticketer());
+	
+	}
+	
+	public void treatCustomer(Platform platform){
+		for( int i= 0 ; i< this.size(); i++){
+			this.get(i).treatCustomer(platform);
+		}
+	}
+	
+	public boolean add(Ticketer t){
+		if(this.size() >= limitOfTickter)
+			return false;
+		super.add(t);
+		return true;
+	}
+
+	public void choiceCustomer(CustomerList customerList, RowForTicket ticketRow) {
+		for( int i= 0 ; i< this.size(); i++){
+			Customer c = strategy.getCustomer(ticketRow);
+			this.get(i).reciveCustomer(c);
+		}
+		
+	}
+}

@@ -1,0 +1,29 @@
+package strategy;
+
+import customer.Customer;
+import ticketBox.Row;
+
+public class Strategy_random implements Strategy{
+
+	@Override
+	public Customer getCustomer(Row row) {
+		return getCustomer(row, 1).get(0);
+	}
+
+	@Override
+	public Row getCustomer(Row row, int num) {
+		Row result = new Row();
+		
+		while(result.size() < num){
+			int randNum = (int)(Math.random() * row.size());
+			Customer c = row.get(randNum);
+			if(result.contains(c))
+				continue;
+			else
+				result.add(c);
+		}
+		
+		return result;
+	}
+
+}

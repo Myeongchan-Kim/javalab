@@ -1,7 +1,0 @@
-package ex7_18s;
-
-public class DanceRobot extends Robot{
-	void dance(){
-		System.out.println("It's dacing.");
-	}
-}

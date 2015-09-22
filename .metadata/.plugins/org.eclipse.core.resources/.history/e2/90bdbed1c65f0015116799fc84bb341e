@@ -1,0 +1,5 @@
+package customer;
+
+public class RowForTrain extends Que{
+
+}

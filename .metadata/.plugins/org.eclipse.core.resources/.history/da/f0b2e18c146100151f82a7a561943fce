@@ -1,0 +1,22 @@
+package strategy;
+
+import customer.Customer;
+import ticketBox.Row;
+
+public class Strategy_random implements Strategy{
+
+	@Override
+	public Customer getCustomer(Row row) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Row getCustomer(Row row, int num) {
+		Row result = new Row();
+		
+		Math.random()*3;
+		return result;
+	}
+
+}

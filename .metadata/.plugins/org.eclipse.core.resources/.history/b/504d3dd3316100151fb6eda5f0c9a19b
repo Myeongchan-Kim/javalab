@@ -1,0 +1,12 @@
+package ticketBox;
+
+import customer.Customer;
+
+public class Platform extends Row{
+	private void getTrain(Platform platform, Row train){
+		while(platform.size()>0){
+			Customer c= platform.get(0);
+			c.rideTrain(train);
+		}
+	}
+}

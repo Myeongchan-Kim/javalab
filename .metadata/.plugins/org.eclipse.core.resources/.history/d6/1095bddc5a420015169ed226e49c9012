@@ -1,7 +1,0 @@
-package maze;
-
-public class Map {
-	Array map = new Array();
-	
-
-}

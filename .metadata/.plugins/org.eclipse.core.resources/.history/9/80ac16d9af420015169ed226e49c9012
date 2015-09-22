@@ -1,5 +1,0 @@
-package maze.playerSet;
-
-public interface DirectionSet {
-
-}

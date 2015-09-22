@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import maze.Position;
 
 public class PosStack {
-	private ArrayList<PosWithNext> stack = null;
+	private ArrayList<PosWithNext> stack;
 	
 	public PosStack (){
 		stack = new ArrayList<PosWithNext>();

@@ -1,0 +1,18 @@
+package customer;
+
+import java.util.ArrayList;
+
+public class Que extends ArrayList<Customer>{
+	
+	public void enque(){
+		
+	}
+	
+	public Customer deque(Customer c){
+		if(isEmpty())
+			return null;
+		remove(c);
+		return c;
+	}
+
+}

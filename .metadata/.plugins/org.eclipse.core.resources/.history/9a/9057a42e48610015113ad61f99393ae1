@@ -1,0 +1,9 @@
+package strategy;
+
+import customer.Customer;
+import ticketBox.Row;
+
+public interface Strategy {
+	public Customer getCustomer(Row row);
+	public Row getCustomer(Row row, int num);
+}

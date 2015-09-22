@@ -1,0 +1,17 @@
+import java.lang.reflect.Constructor;
+import java.net.MalformedURLException;
+
+public class InvokeClass {
+
+	public static void main (String args) throws MalformedURLException, ClassNotFoundException, InstantiationException, IllegalAccessException{
+		Class c = DataClassLoader.loadClass("http://127.0.0.1:9090/", "RemoteData");
+
+		Class[] parameterTypes = {String.class, String.class};
+		Constructor cons = c.getConstructor(parameterTypes);
+		
+		Object[] initargs = new Object[]{"teacher", "Seoul"};
+		cons.newInstance(initargs);
+		Object obj = c.newInstance();
+		System.out.println(obj);
+	}
+}

@@ -1,0 +1,10 @@
+package strategy;
+
+import customer.Customer;
+import customer.Row;
+
+public interface Strategy {
+	public Customer getCustomer();
+	public Customer getCustomer(Row row);
+	public Customer getCustomer(Row row, int num);
+}

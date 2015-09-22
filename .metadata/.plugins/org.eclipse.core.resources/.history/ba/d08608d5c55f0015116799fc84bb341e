@@ -1,0 +1,9 @@
+package customer;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class Que extends ArrayList<Customer>{
+
+}

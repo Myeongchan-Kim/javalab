@@ -1,0 +1,14 @@
+package customer;
+
+import java.util.ArrayList;
+
+public class Que extends ArrayList<Customer>{
+	public Customer pop(){
+		return null;
+	}
+	
+	public void push(){
+		
+	}
+
+}

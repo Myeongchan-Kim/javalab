@@ -1,0 +1,96 @@
+package test;
+
+import java.util.Iterator;
+
+import customer.Customer;
+import customer.CustomerList;
+import strategy.Strategy;
+import ticketBox.Platform;
+import ticketBox.Row;
+import ticketBox.RowForTicket;
+import ticketBox.TicketCenter;
+
+public class TestModule extends Thread{
+
+	int ticketer = 3;
+	String fileName;
+	int time;
+	Strategy strategy;
+	CustomerList customerList;
+	
+	public TestModule(String fileName,Strategy strategy){
+		this.fileName = fileName;
+		this.time = 0;
+
+		//load customer list
+		customerList = new CustomerList(fileName);
+		//customerList.showAllCustomer();
+		this.strategy = strategy;
+	}
+
+	
+	public void run(){
+		System.out.println("Ticketing start");
+		 
+		RowForTicket ticketRow = new RowForTicket();
+		Platform platform = new Platform();
+		TicketCenter office = new TicketCenter(ticketer, strategy);
+		
+		//custommer comming start.
+		while(customerList.isAllFinished() || time < 1000){
+			//treat customer
+			System.out.println("Proceeding... time : "+ time);
+			proceeding(platform, ticketRow, office);
+			
+			//time is going on....
+			timespend();
+		}
+		
+		System.out.println("Ticketing finished");
+		return;
+	}
+	
+	private void proceeding(Platform platform, RowForTicket ticketRow, TicketCenter office){
+		//finished Customer => platform
+		office.treatCustomer(platform);
+		
+		// platform -> train
+		if(time % 3  == 2){
+			trainCome();
+			getTrain(platform);
+		}
+		
+		// new customer arrived
+		customerList.newCustomersCome(ticketRow);
+		
+		// change customer
+		office.changeCustomer(customerList, ticketRow);
+		
+		//treat finished customer
+		customerList.finishedCustomersGo();
+	}
+
+	private void getTrain(Platform customers){
+		
+		for(int i=0; i<customers.size(); i++){
+			Customer c= customers.get(i);
+			c.rideTrain();
+		}
+		customers.clear();
+	}
+	
+	private void trainCome(){
+		System.out.println("A train comes.");
+	}
+	
+	private void timespend(){
+		this.time++;
+		customerList.timeSpend();
+		try {
+			sleep(20);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,15 @@
+package test;
+
+import strategy.*;
+
+public class TrainTicketingTest {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		TestModule test = new TestModule("CustomerTable.csv", new Strategy_random());
+		
+		test.run();
+		
+	}
+
+}
